@@ -5,6 +5,7 @@ nav{
 }
 header{
     display: flex;
+    text-align:center ;
 
 }
 .sla{
