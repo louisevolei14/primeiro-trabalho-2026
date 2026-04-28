@@ -1,5 +1,12 @@
 nav{
     align-items: center;
     font-size: 50px;
-    .titulo text-align:center; 
+    text-align:center; 
+}
+header{
+    display: flex;
+
+}
+.sla{
+     display: flex;
 }
