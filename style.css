@@ -1,130 +1,123 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confeitaria Ana Louise</title>
-    <style>
-        /* Reset básico */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-        body {
-            background: #fff7f0;
-            color: #333;
-            padding: 20px;
-        }
+/* Corpo da página */
+body {
+    background-color: #fff7f0;
+    color: #333;
+    padding: 20px;
+}
 
-        h1 {
-            text-align: center;
-            color: #d2691e;
-            margin-bottom: 30px;
-            font-size: 2.5rem;
-        }
+/* Navegação */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffd9b3;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
 
-        .cardapio-section {
-            margin-bottom: 40px;
-        }
+nav h1 {
+    color: #d2691e;
+    font-size: 2rem;
+}
 
-        .section-title {
-            font-size: 1.8rem;
-            color: #b22222;
-            border-bottom: 2px solid #d2691e;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-        }
+/* Menu principal */
+header {
+    margin-bottom: 30px;
+}
 
-        ul {
-            list-style: none;
-        }
+header ul.menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    padding: 10px 0;
+    background-color: #ffe0cc;
+    border-radius: 10px;
+}
 
-        li {
-            background: #fff1e6;
-            margin-bottom: 10px;
-            padding: 15px 20px;
-            border-radius: 8px;
-            display: flex;
-            justify-content: space-between;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
+header ul.menu li {
+    cursor: pointer;
+    font-weight: bold;
+    color: #b22222;
+    transition: color 0.3s;
+}
 
-        li:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
+header ul.menu li:hover {
+    color: #8b0000;
+}
 
-        .product-name {
-            font-weight: bold;
-            color: #8b0000;
-        }
+/* Seções de produtos */
+section.produto {
+    background-color: #fff1e6;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
-        .price {
-            color: #d2691e;
-        }
+section.produto:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
 
-        /* Cookies com subitens */
-        .sub-items {
-            margin-top: 5px;
-            padding-left: 15px;
-            font-weight: normal;
-            color: #555;
-        }
+section.produto h2 {
+    color: #b22222;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
 
-        @media (max-width: 600px) {
-            li {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+section.produto .preco {
+    color: #d2691e;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
 
-            .price {
-                margin-top: 5px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <h1>Confeitaria Ana Louise</h1>
+section.produto img {
+    margin-top: 10px;
+    border-radius: 10px;
+}
 
-    <div class="cardapio-section">
-        <div class="section-title">Pedaço de Bolo</div>
-        <ul>
-            <li><span class="product-name">Pedaço de bolo</span><span class="price">R$ 10,00</span></li>
-        </ul>
-    </div>
+/* Listas dentro das seções */
+section.produto ul {
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 0;
+}
 
-    <div class="cardapio-section">
-        <div class="section-title">Salgados</div>
-        <ul>
-            <li><span class="product-name">Cento de salgados</span><span class="price">R$ 130,00</span></li>
-        </ul>
-    </div>
+section.produto ul li {
+    background-color: #ffe0cc;
+    margin: 5px 0;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #8b0000;
+}
 
-    <div class="cardapio-section">
-        <div class="section-title">Cookies Recheados</div>
-        <ul>
-            <li>
-                <span class="product-name">Cookie recheado</span>
-                <span class="price">R$ 7,00</span>
-                <div class="sub-items">Sabores: Morango, Chocolate, Nutella, Kit Kat, Amendoim</div>
-            </li>
-        </ul>
-    </div>
+/* Responsividade */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-    <div class="cardapio-section">
-        <div class="section-title">Bolos Inteiros</div>
-        <ul>
-            <li><span class="product-name">Kinder</span><span class="price">R$ 50,00</span></li>
-            <li><span class="product-name">Chocolate</span><span class="price">R$ 30,00</span></li>
-            <li><span class="product-name">Ouro Branco</span><span class="price">R$ 40,00</span></li>
-            <li><span class="product-name">Morango</span><span class="price">R$ 40,00</span></li>
-            <li><span class="product-name">4 Leites</span><span class="price">R$ 45,00</span></li>
-            <li><span class="product-name">Nutella</span><span class="price">R$ 50,00</span></li>
-        </ul>
-    </div>
+    header ul.menu {
+        flex-direction: column;
+        gap: 15px;
+    }
 
-</body>
-</html>
+    section.produto img {
+        width: 80%;
+        height: auto;
+    }
+}
