@@ -116,8 +116,8 @@ section.produto ul li {
         gap: 15px;
     }
 
-    section.produto img {
-        width: 80%;
-        height: auto;
-    }
+}
+.sla{
+    align-items: center;
+    display: flex;
 }
